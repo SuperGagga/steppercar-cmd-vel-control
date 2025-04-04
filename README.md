@@ -1,7 +1,7 @@
 Mecanum Wheel Control with Stepper Motors & ROS 2 on Wemos D1 R32 (ESP32) + CNC Shield V3
 
-🎥 My Test Video
-Watch the demo here: Test Video
+My Test Video
+Watch the demo here: https://youtu.be/DWA5EpyQzwQ
 
 Video Overview
 In this video, we use a joystick to control the robot, and ROS 2 converts the joystick input into cmd_vel messages. The robot movement is then controlled via cmd_vel commands.

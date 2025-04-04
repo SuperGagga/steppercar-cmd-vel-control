@@ -1,2 +1,2 @@
 # steppercar-cmd-vel-control
-This repository contains the code for controlling a StepperCar robot using cmd_vel commands from ROS (Robot Operating System)
+Mecanum Wheel Control with Stepper Motors & ROS 2 on Wemos D1 R32 (ESP32) + CNC Shield V3

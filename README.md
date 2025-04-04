@@ -26,6 +26,6 @@ Additionally, when using the CNC Shield V3 with the Wemos D1 R32, we had to make
 ![image](https://github.com/user-attachments/assets/2527e12d-39b8-4f54-b7d0-242d67e6be79)
 
 Sequence Diagram of Code on Wemos D1 R32 (ESP32)
-This sequence diagram illustrates how the system works when running the code on the Wemos D1 R32 (ESP32). It shows the interactions between the joystick, ROS 2, the serial communication, and the motor control via the CNC Shield V3.
+This sequence diagram illustrates how the system works when running the code on the Wemos D1 R32 (ESP32).
 ![สกรีนช็อต 2025-04-03 022816](https://github.com/user-attachments/assets/b5dd2071-487e-4b6f-b195-e9314e54da75)
 

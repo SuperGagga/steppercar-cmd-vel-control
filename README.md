@@ -1,6 +1,6 @@
 # Mecanum Wheel Control with Stepper Motors & ROS 2  
 **Platform:** Wemos D1 R32 (ESP32) + CNC Shield V3
-![image](https://github.com/user-attachments/assets/1ad71b93-bfb3-4e33-8a22-8aebcc55ecee)
+
 
 ## Demo Video  
 Watch the demo here: [YouTube Demo](https://youtu.be/DWA5EpyQzwQ)
@@ -9,27 +9,30 @@ Watch the demo here: [YouTube Demo](https://youtu.be/DWA5EpyQzwQ)
 This project demonstrates how to control a 4-wheeled Mecanum robot using stepper motors and ROS 2.  
 A joystick is used to control the robot, with ROS 2 converting joystick inputs into velocity commands (`cmd_vel`).  
 These commands are sent to the ESP32 via UART for motor control.
-![image](https://github.com/user-attachments/assets/d9365329-0cb6-402d-8934-6d0d4069a4a8)
+![image](https://github.com/user-attachments/assets/1ad71b93-bfb3-4e33-8a22-8aebcc55ecee)
 
 ## Features
 - ROS 2 integration
 - Serial communication between ROS 2 and ESP32
 - Mecanum wheel kinematics with `vx`, `vy`, and `wz` velocity components
 - Stepper motor control using CNC Shield V3
-![image](https://github.com/user-attachments/assets/9bd89352-faf3-4a98-9e0d-ec436ba283b7)
+
 
 ## ROS 2 Setup  
 Within ROS 2, the robot is controlled using the standard `cmd_vel` topic.  
 A custom node called `serial_bridge_node` subscribes to this topic and transmits the following values over UART:
-- `vx`: Linear velocity in the x-direction  
-- `vy`: Linear velocity in the y-direction  
-- `wz`: Angular velocity around the z-axis  
+![image](https://github.com/user-attachments/assets/d9365329-0cb6-402d-8934-6d0d4069a4a8)
+
 
 ## Serial Bridge Node  
 The `serial_bridge_node` is a simple ROS 2 node that:
 - Subscribes to `/cmd_vel`
 - Extracts `vx`, `vy`, and `wz`
+- `vx`: Linear velocity in the x-direction  
+- `vy`: Linear velocity in the y-direction  
+- `wz`: Angular velocity around the z-axis  
 - Sends these values via UART to the MCU (ESP32)
+![image](https://github.com/user-attachments/assets/9bd89352-faf3-4a98-9e0d-ec436ba283b7)
 
 ## Why I Chose Wemos D1 R32 (ESP32)  
 I initially tried using the **Arduino UNO R4 WiFi**, but encountered an issue where the board would **freeze after reading serial data for a short time**.  
